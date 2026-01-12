@@ -9,7 +9,7 @@ export default function MainLayout() {
     <div className="min-h-screen bg-gray-50 pb-20">
       {showSettings && (
         <div className="max-w-md mx-auto px-4 py-3 flex justify-between items-center bg-white border-b border-gray-200 sticky top-0 z-40">
-          <h1 className="text-lg font-bold text-primary">Fertility App</h1>
+          <h1 className="text-lg font-bold text-primary">Fertility Maxxing</h1>
           <Link
             to="/settings"
             className="p-2 hover:bg-gray-100 rounded-lg transition-colors touch-target"

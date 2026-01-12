@@ -10,8 +10,8 @@ export default defineConfig({
       registerType: 'autoUpdate',
       includeAssets: ['favicon.ico', 'apple-touch-icon.png', 'masked-icon.svg'],
       manifest: {
-        name: 'Fertility Optimization App',
-        short_name: 'FertilityApp',
+        name: 'Fertility Maxxing',
+        short_name: 'FertMaxxing',
         description: 'A 90-day program for couples trying to conceive',
         theme_color: '#14B8A6',
         background_color: '#ffffff',
