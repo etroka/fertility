@@ -126,7 +126,7 @@ export default function OnboardingFlow() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-primary/10 to-secondary/10 flex items-center justify-center p-4">
+    <div className="min-h-screen bg-paper flex items-center justify-center p-4">
       <div className="w-full max-w-md">
         {/* Progress indicator */}
         <div className="mb-8">
@@ -134,26 +134,26 @@ export default function OnboardingFlow() {
             {[1, 2, 3, 4, 5].map((i) => (
               <div
                 key={i}
-                className={`w-10 h-10 rounded-full flex items-center justify-center text-sm font-semibold ${
+                className={`w-10 h-10 rounded-full flex items-center justify-center text-sm font-semibold transition-all ${
                   i <= step
-                    ? 'bg-primary text-white'
-                    : 'bg-gray-200 text-gray-400'
+                    ? 'bg-gradient-to-br from-vitality-coral to-vitality-ember text-white shadow-glow'
+                    : 'bg-stone-200 text-stone-500 border-2 border-stone-300'
                 }`}
               >
                 {i}
               </div>
             ))}
           </div>
-          <div className="h-2 bg-gray-200 rounded-full overflow-hidden">
+          <div className="h-2 bg-stone-200 rounded-full overflow-hidden">
             <div
-              className="h-full bg-primary transition-all duration-300"
+              className="h-full bg-gradient-to-r from-vitality-coral to-vitality-ember transition-all duration-500"
               style={{ width: `${(step / 5) * 100}%` }}
             />
           </div>
         </div>
 
         {/* Step content */}
-        <div className="bg-white rounded-2xl shadow-xl p-8">{renderStep()}</div>
+        <div className="glass-card-strong rounded-2xl p-8">{renderStep()}</div>
       </div>
     </div>
   );

@@ -83,16 +83,16 @@ export default function HealthWaveChart({ data = [], type = 'sperm' }) {
   return (
     <div className="space-y-6">
       {/* Phase Indicator */}
-      <div className="flex items-center justify-between">
-        <div>
-          <h3 className="text-body-lg font-semibold text-stone-900">
+      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+        <div className="flex-1 min-w-0">
+          <h3 className="text-body-lg font-semibold text-stone-900 truncate">
             {phase.current}
           </h3>
           <p className="text-body-sm text-stone-600 mt-1">
             {phase.description}
           </p>
         </div>
-        <div className={`px-4 py-2 rounded-full bg-gradient-to-r ${colors.gradient} text-white text-body-sm font-medium`}>
+        <div className={`px-4 py-2 rounded-full bg-gradient-to-r ${colors.gradient} text-white text-body-sm font-medium whitespace-nowrap self-start sm:self-auto`}>
           Active
         </div>
       </div>
