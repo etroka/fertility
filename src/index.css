@@ -1,10 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   body {
-    @apply bg-gray-50 text-gray-900;
+    @apply bg-paper text-stone-900 font-sans antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-white/40 backdrop-blur-md border border-white/20 shadow-glass;
+  }
+
+  .glass-card-strong {
+    @apply bg-white/60 backdrop-blur-lg border-0.5 border-white/30 shadow-glass-lg;
+  }
+
+  .gradient-text {
+    @apply bg-clip-text text-transparent bg-gradient-vitality;
   }
 }
 
@@ -12,5 +33,9 @@
   .touch-target {
     min-width: 48px;
     min-height: 48px;
+  }
+
+  .text-balance {
+    text-wrap: balance;
   }
 }
